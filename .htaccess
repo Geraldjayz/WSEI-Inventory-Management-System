@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^api/inventory - [L]
+  RewriteRule ^api/sales - [L]
+  RewriteRule ^api/expenses - [L]
+</IfModule>
+
+<Limit DELETE>
+  Order allow,deny
+  Allow from all
+</Limit>

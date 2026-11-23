@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Expenses — Business Tracker</title>
+  <link rel="stylesheet" href="expenses.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js" defer></script>
+</head>
+<body>
+  <!-- Top navbar (same design as index) -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="./"><img src="logo.png" alt="Logo" width="40" /> <span>Business Tracker</span></a>
+
+      <nav class="topnav">
+        <a href="./" class="nav-link">Home</a>
+        <a href="./expenses.html" class="nav-link">Expenses</a>
+        <a href="./reports.html" class="nav-link active">Reports</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="expense-container">
+    <h2>💵 Expenses Tracker</h2>
+
+    <form id="expenses-form" class="form-grid">
+      <input type="text" id="expenseType" placeholder="Expense Type" required />
+      <input type="number" id="expenseAmount" placeholder="Amount" step="0.01" required />
+      <input type="date" id="expenseDate" required />
+      <select id="expensePaymentMethod" required>
+        <option value="" disabled>Payment method</option>
+        <option value="Cash">Cash</option>
+        <option value="M-Pesa">M-Pesa</option>
+        <option value="Credit">Credit</option>
+      </select>
+      <button type="submit">+ Add Expense</button>
+    </form>
+
+    <h3>Expenses</h3>
+    <table id="expenses-table">
+      <thead><tr><th>Expense</th><th>Amount</th><th>Date</th><th>Payment</th></tr></thead>
+      <tbody></tbody>
+    </table>
+
+   <div class="actions">
+    <button id="download-expenses">📥 Download Excel</button>
+    <button id="clear-expenses">🧹 Clear Expenses</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  </div>
+
+  <script src="expenses.js" defer></script>
+</body>
+</html>

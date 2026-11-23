@@ -1,0 +1,337 @@
+/* styles.css - Consolidated and optimized */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover {
+  background-color: #34495e;
+}
+
+.sidebar ul li.active {
+  background-color: #3498db;
+}
+
+.main-content {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  display: none;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#clearInventoryBtn, #clearSalesBtn, #clear-expenses {
+  background-color: #e74c3c;
+}
+
+#clearInventoryBtn:hover, #clearSalesBtn:hover, #clear-expenses:hover {
+  background-color: #c0392b;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f8f9fa;
+}
+
+.actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.actions button {
+  padding: 12px 25px;
+  font-size: 16px;
+}
+
+.chart-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.chart-card h2 {
+  margin-top: 0;
+}
+
+/* Fix for select validation */
+select:invalid {
+  color: gray;
+}
+
+select option {
+  color: black;
+}
+
+select option[value=""][disabled] {
+  display: none;
+}
+
+/* Additional styles from your original styles.css */
+.revenue-positive {
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: bold;
+}
+
+.revenue-negative {
+  background-color: #f8d7da;
+  color: #721c24;
+  font-weight: bold;
+}
+
+/* Bigger and styled buttons */
+button {
+  font-size: 22px;
+  padding: 16px 28px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Full-width, enlarged, and spaced input fields */
+#expenses-form,
+#expense-records {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure body and parent containers are not limiting width */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Main container holding expenses */
+#expensesSection {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* ENLARGE all inputs and selects in Expenses */
+#expenses-form input[type="text"],
+#expenses-form input[type="number"],
+#expenses-form input[type="date"],
+#expenses-form select {
+  font-size: 18px;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Style buttons */
+#expenses-form button {
+  font-size: 18px;
+  padding: 16px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 8px;
+}
+/* ========== MOBILE RESPONSIVENESS ========== */
+
+/* Small tablets and large phones */
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 200px 1fr;
+  }
+  .sidebar {
+    padding: 15px;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  button {
+    font-size: 18px;
+    padding: 14px 22px;
+  }
+}
+
+/* Phones and small devices */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Sidebar becomes collapsible */
+  .sidebar {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+    text-align: center;
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  h1, h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  .sidebar ul li {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  input, select, button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}

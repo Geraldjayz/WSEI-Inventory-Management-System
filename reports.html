@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reports — Business Tracker</title>
+  <link rel="stylesheet" href="reports.css" />
+  <link rel="icon" href="favicon.png" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="reports.js" defer></script>
+</head>
+<body>
+  <!-- Top navbar -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="./">
+        <img src="logo.png" alt="Logo" width="40" />
+        <span>Business Tracker</span>
+      </a>
+      <nav class="topnav">
+        <a href="./" class="nav-link">Home</a>
+        <a href="./expenses.html" class="nav-link">Expenses</a>
+        <a href="./reports.html" class="nav-link active">Reports</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reports-container">
+    <h1>📊 Business Reports</h1>
+
+    <div class="chart-card">
+      <h2>Sales Overview</h2>
+      <canvas id="salesChart" width="800" height="300"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>Expenses Overview</h2>
+      <canvas id="expensesChart" width="800" height="300"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>Inventory Overview</h2>
+      <canvas id="inventoryChart" width="400" height="400"></canvas>
+    </div>
+  </main>
+</body>
+</html>
+

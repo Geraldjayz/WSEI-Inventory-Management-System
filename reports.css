@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.reports-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.chart-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.chart-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* simple navbar reuse */
+.topbar {
+  background: #1a73e8;
+  color: #fff;
+  padding: 10px 20px;
+}
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.topnav .nav-link {
+  margin-left: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+.topnav .active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN FOR REPORTS PAGE */
+@media (max-width: 768px) {
+  .reports-container {
+    padding: 10px;
+  }
+
+  .chart-card {
+    padding: 15px;
+  }
+
+  .topbar-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .topnav .nav-link {
+    display: block;
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .chart-card h2 {
+    font-size: 1rem;
+  }
+}
